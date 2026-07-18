@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom' // Import NavLink để tạo menu có trạng thái
 import { FiUsers, FiActivity } from 'react-icons/fi' // Import icon menu
-import logo from '../../assets/MealMate Logo.png' // Import logo MealMate dạng PNG
+import logo from '../../assets/MealBuddy Logo.png' // Import logo MealBuddy dạng PNG
 
 const MealIcon = ({ className }) => ( // Icon svg nội tuyến
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +28,9 @@ const Sidebar = () => { // Component Sidebar chính
     <aside className="w-72 bg-white border-r border-gray-100 flex flex-col justify-between py-12 px-10"> {/* Thanh sidebar */}
       <div> {/* Vùng logo và menu */}
         <div className="flex items-center gap-4 mb-12"> {/* Logo */}
-          <img src={logo} alt="MealMate" className="w-14 h-14" /> {/* Ảnh logo */}
+          <img src={logo} alt="MealBuddy" className="w-14 h-14" /> {/* Ảnh logo */}
           <div> {/* Nhãn thương hiệu */}
-            <p className="text-2xl font-semibold text-charcoal">MealMate</p> {/* Tên */}
+            <p className="text-2xl font-semibold text-charcoal">MealBuddy</p> {/* Tên */}
             <span className="text-sm text-gray-400">Plan your best meals</span> {/* Tagline */}
           </div> {/* Kết thúc nhãn */}
         </div> {/* Kết thúc logo */}
@@ -52,7 +52,7 @@ const Sidebar = () => { // Component Sidebar chính
         </nav> {/* Kết thúc nav */}
       </div> {/* Kết thúc vùng trên */}
       <p className="text-xs text-gray-400 leading-5">
-        © {new Date().getFullYear()} MealMate · Bảo mật & điều khoản
+        © {new Date().getFullYear()} MealBuddy · Bảo mật & điều khoản
       </p> {/* Ghi chú bản quyền */}
     </aside> // Kết thúc aside
   ) // Kết thúc JSX

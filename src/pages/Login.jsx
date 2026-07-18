@@ -1,6 +1,6 @@
 import { useState } from 'react' // Hook state
 import { useNavigate } from 'react-router-dom' // Import hook điều hướng
-import logo from '../assets/MealMate Logo.png' // Import logo PNG mới
+import logo from '../assets/MealBuddy Logo.png' // Import logo PNG mới
 import apiClient from '../lib/apiClient.js' // HTTP client
 import { useAuth } from '../context/AuthContext.jsx' // Hook auth
 
@@ -39,10 +39,10 @@ const Login = () => { // Component login
       <div className="max-w-2xl w-full bg-white rounded-[40px] shadow-card px-16 py-14 space-y-10 text-center border border-gray-100">
         {/* Khối form */}
         <div className="space-y-5">
-          <img src={logo} alt="MealMate" className="w-36 mx-auto drop-shadow-lg" /> {/* Logo lớn */}
+          <img src={logo} alt="MealBuddy" className="w-36 mx-auto drop-shadow-lg" /> {/* Logo lớn */}
           <h1 className="text-5xl font-semibold text-charcoal">Đăng nhập</h1> {/* Title */}
           <p className="text-gray-500 text-base">
-            Truy cập bảng điều khiển để quản lý người dùng và số liệu MealMate
+            Truy cập bảng điều khiển để quản lý người dùng và số liệu MealBuddy
           </p> {/* Mô tả ngắn */}
         </div> {/* Kết thúc tiêu đề */}
         <form onSubmit={handleSubmit} className="space-y-6 text-left"> {/* Form */}

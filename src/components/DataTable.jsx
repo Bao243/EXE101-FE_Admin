@@ -30,7 +30,7 @@ const DataTable = ({ columns, rows }) => { // Component bảng tái sử dụng
             ))} {/* Kết thúc lặp hàng */}
             <tr>
               <td colSpan={columns.length} className="px-8 pt-4 pb-2 text-center text-xs uppercase tracking-[0.3em] text-gray-400">
-                © {new Date().getFullYear()} MealMate · Bảo mật & điều khoản
+                © {new Date().getFullYear()} MealBuddy · Bảo mật & điều khoản
               </td>
             </tr>
           </tbody> {/* Kết thúc tbody */}

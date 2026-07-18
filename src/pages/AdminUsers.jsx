@@ -138,7 +138,7 @@ const AdminUsers = () => { // Component trang user
   ] // Kết thúc cột
 
   return ( // JSX
-    <PageWrapper title="Administrator" subtitle="MealMate Dashboard"> {/* Bố cục */}
+    <PageWrapper title="Administrator" subtitle="MealBuddy Dashboard"> {/* Bố cục */}
       <div className="space-y-6"> {/* Nội dung */}
         <div className="bg-white rounded-[32px] shadow-card p-8 flex flex-wrap gap-6 justify-between items-center border border-gray-100">
           <div className="space-y-2">
