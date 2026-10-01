@@ -1,7 +1,7 @@
 import axios from 'axios' // Import axios để tạo HTTP client
 
 const apiClient = axios.create({
-  baseURL: 'https://exe-be-v4pd.onrender.com/api', // Base URL backend
+  baseURL: 'https://exe101-be-p1xz.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
     // Không thêm Cache-Control vì server không cho phép trong CORS policy
