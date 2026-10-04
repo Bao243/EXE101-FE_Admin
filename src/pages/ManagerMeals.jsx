@@ -308,11 +308,7 @@ const ManagerMeals = () => {
     paginationInfo?.pages ??
     paginationInfo?.pageCount ??
     (paginationInfo?.total ? Math.ceil(paginationInfo.total / effectiveLimit) : undefined)
-  const hasPrevPage =
-    paginationInfo?.hasPrevPage ??
-    paginationInfo?.hasPrev ??
-    paginationInfo?.has_previous ??
-    (currentPage > 1 ? true : false)
+  const hasPrevPage = currentPage > 1
   const hasNextPage =
     paginationInfo?.hasNextPage ??
     paginationInfo?.hasNext ??
@@ -479,7 +475,7 @@ const ManagerMeals = () => {
             <div className="flex items-center justify-between pt-2 text-sm text-gray-500">
               <button
                 className="px-4 py-2 rounded-full border border-gray-200 disabled:opacity-40 hover:bg-gray-50 transition"
-                disabled={currentPage <= 1 || hasPrevPage === false}
+                disabled={!hasPrevPage}
                 onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
               >
                 Trang trước
