@@ -302,18 +302,14 @@ const ManagerMeals = () => {
     paginationInfo?.totalItem ??
     paginationInfo?.totalDocs ??
     (isSearching ? rows.length : rows.length)
-  const currentPage = paginationInfo?.page ?? paginationInfo?.currentPage ?? page
+  const currentPage = page
   const totalPages =
     paginationInfo?.totalPages ??
     paginationInfo?.pages ??
     paginationInfo?.pageCount ??
     (paginationInfo?.total ? Math.ceil(paginationInfo.total / effectiveLimit) : undefined)
-  const hasPrevPage = currentPage > 1
-  const hasNextPage =
-    paginationInfo?.hasNextPage ??
-    paginationInfo?.hasNext ??
-    paginationInfo?.has_next ??
-    (totalPages ? currentPage < totalPages : rows.length === effectiveLimit)
+  const hasPrevPage = page > 1
+  const hasNextPage = totalPages ? page < totalPages : rows.length === effectiveLimit
 
   const displayedTotalText = isSearching
     ? `Kết quả: ${totalItems ?? rows.length} món`
