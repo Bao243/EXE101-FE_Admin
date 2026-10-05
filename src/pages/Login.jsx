@@ -1,6 +1,6 @@
 import { useState } from 'react' // Hook state
 import { useNavigate } from 'react-router-dom' // Import hook điều hướng
-import logo from '../assets/MealBuddy Logo.png' // Import logo PNG mới
+import logo from '../assets/MealBuddy Logo Transparent.png' // Import logo PNG transparent
 import apiClient from '../lib/apiClient.js' // HTTP client
 import { useAuth } from '../context/AuthContext.jsx' // Hook auth
 

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom' // Import NavLink để tạo menu có trạng thái
 import { FiUsers, FiActivity } from 'react-icons/fi' // Import icon menu
-import logo from '../../assets/MealBuddy Logo.png' // Import logo MealBuddy dạng PNG
+import logo from '../../assets/MealBuddy Logo Transparent.png' // Import logo MealBuddy dạng PNG transparent
 
 const MealIcon = ({ className }) => ( // Icon svg nội tuyến
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
