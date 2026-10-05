@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react' // Hook React
+import { createContext, useContext, useMemo, useState } from 'react' // Hook React
 
 const AuthContext = createContext(null) // Khởi tạo context
 
@@ -15,13 +15,8 @@ const loadInitialState = () => {
 }
 
 export const AuthProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true) // Đang khởi tạo auth
   const [tokens, setTokens] = useState(() => loadInitialState().tokens) // State token
   const [profile, setProfile] = useState(() => loadInitialState().profile) // State profile
-
-  useEffect(() => {
-    setIsLoading(false) // Đã đọc xong localStorage, cho phép render
-  }, []) // Chỉ chạy 1 lần khi mount
 
   const persist = (nextTokens, nextProfile) => {
     const payload = { tokens: nextTokens, profile: nextProfile } // Gói dữ liệu
@@ -44,13 +39,12 @@ export const AuthProvider = ({ children }) => {
     () => ({
       tokens,
       profile,
-      isLoading,
       isAuthenticated: Boolean(tokens?.accessToken),
       login,
       logout,
       setProfile,
     }),
-    [tokens, profile, isLoading],
+    [tokens, profile],
   ) // Memo hoá context value
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider> // Provider

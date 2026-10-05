@@ -1,20 +1,15 @@
 import { useState } from 'react' // Hook state
-import { Navigate, useNavigate } from 'react-router-dom' // Import hook điều hướng
+import { useNavigate } from 'react-router-dom' // Import hook điều hướng
 import logo from '../assets/MealBuddy Logo.png' // Import logo PNG mới
 import apiClient from '../lib/apiClient.js' // HTTP client
 import { useAuth } from '../context/AuthContext.jsx' // Hook auth
 
 const Login = () => { // Component login
   const navigate = useNavigate() // Hook điều hướng
-  const { login, isAuthenticated, isLoading } = useAuth() // Lấy hàm login từ context
+  const { login } = useAuth() // Lấy hàm login từ context
   const [formValues, setFormValues] = useState({ username: '', password: '' }) // State form
   const [isSubmitting, setIsSubmitting] = useState(false) // Trạng thái submit
   const [error, setError] = useState(null) // Thông báo lỗi
-
-  // Nếu đã đăng nhập rồi → redirect về dashboard, không cho vào trang login
-  if (!isLoading && isAuthenticated) {
-    return <Navigate to="/admin/users" replace />
-  }
 
   const handleChange = (event) => {
     const { name, value } = event.target
